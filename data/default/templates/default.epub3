@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops"$if(lang)$ xml:lang="$lang$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <title>$pagetitle$</title>
+$if(quotes)$
+  <style type="text/css">
+    q { quotes: "“" "”" "‘" "’"; }
+  </style>
+$endif$
+  <style type="text/css">
+  
+  code > span.CodeAtom {color: #221199}
+code > span.CodeAttribute {color: #0000CC}
+code > span.CodeBracket {color: #999977}
+code > span.CodeBuiltin {color: #3300AA}
+code > span.CodeComment {color: #AA5500}
+code > span.CodeDef {color: #0000FF}
+code > span.CodeEm {font-style: italic;}
+code > span.CodeError {color: #FF0000}
+code > span.CodeHeader {color: #0000FF;font-weight: bold;}
+code > span.CodeHr {color: #999999}
+code > span.CodeInvalidchar {color: #FF0000}
+code > span.CodeKeyword {color: #770088}
+code > span.CodeLink {color: #0000CC;text-decoration: underline;}
+code > span.CodeMeta {color: #555555}
+code > span.CodeNegative {color: #DD4444}
+code > span.CodeNumber {color: #116644}
+code > span.CodePositive {color: #229922}
+code > span.CodeQualifier {color: #555555}
+code > span.CodeQuote {color: #009900}
+code > span.CodeString {color: #AA1111}
+code > span.CodeString2 {color: #FF5500}
+code > span.CodeStrong {font-weight: bold;}
+code > span.CodeTag {color: #117700}
+code > span.CodeVariable2 {color: #0055AA}
+code > span.CodeVariable3 {color: #008855}
+
+  </style>
+$for(css)$
+  <link rel="stylesheet" href="$css$" />
+$endfor$
+</head>
+<body>
+$if(titlepage)$
+  <h1 class="title">$title$</h1>
+$if(subtitle)$
+  <h1 class="subtitle">$subtitle$</h1>
+$endif$
+$for(author)$
+  <h2 class="author">$author$</h2>
+$endfor$
+$if(date)$
+  <h3 class="date">$date$</h3>
+$endif$
+$else$
+$body$
+$endif$
+</body>
+</html>
+

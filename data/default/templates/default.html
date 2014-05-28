@@ -16,23 +16,33 @@ $if(quotes)$
   <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
 $endif$
   <style type="text/css">
-  <% if (theme.SourceCode) {
-    var style = 'pre, code {';
-    if (theme.SourceCode.color) style+='color: #'+theme.SourceCode.color;
-    if (theme.SourceCode.background) style+='background-color: #'+theme.SourceCode.background;
-    print(style+"}\n");
-  }%>
-  <%_.forEach(theme.tokens, function(token) {
-      var styles = [];
-      if (token.color) styles.push("color: #"+ token.color);
-      if (token.background) styles.push("background-color: #"+ token.background);
-      if (token.bold) styles.push("font-weight: bold;");
-      if (token.italic) styles.push("font-style: italic;");
-      if (token.underline) styles.push("text-decoration: underline;");
-      if (styles.length>0)
-        print("code > span."+token.name+" {"+styles.join(";")+"}\n");
-    });
-  %>
+  
+  code > span.CodeAtom {color: #221199}
+code > span.CodeAttribute {color: #0000CC}
+code > span.CodeBracket {color: #999977}
+code > span.CodeBuiltin {color: #3300AA}
+code > span.CodeComment {color: #AA5500}
+code > span.CodeDef {color: #0000FF}
+code > span.CodeEm {font-style: italic;}
+code > span.CodeError {color: #FF0000}
+code > span.CodeHeader {color: #0000FF;font-weight: bold;}
+code > span.CodeHr {color: #999999}
+code > span.CodeInvalidchar {color: #FF0000}
+code > span.CodeKeyword {color: #770088}
+code > span.CodeLink {color: #0000CC;text-decoration: underline;}
+code > span.CodeMeta {color: #555555}
+code > span.CodeNegative {color: #DD4444}
+code > span.CodeNumber {color: #116644}
+code > span.CodePositive {color: #229922}
+code > span.CodeQualifier {color: #555555}
+code > span.CodeQuote {color: #009900}
+code > span.CodeString {color: #AA1111}
+code > span.CodeString2 {color: #FF5500}
+code > span.CodeStrong {font-weight: bold;}
+code > span.CodeTag {color: #117700}
+code > span.CodeVariable2 {color: #0055AA}
+code > span.CodeVariable3 {color: #008855}
+
   </style>
 $for(css)$
   <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>

@@ -10,11 +10,25 @@ $if(quotes)$
     q { quotes: "“" "”" "‘" "’"; }
   </style>
 $endif$
-$if(highlighting-css)$
   <style type="text/css">
-$highlighting-css$
+  <% if (theme.SourceCode) {
+    var style = 'pre, code {';
+    if (theme.SourceCode.color) style+='color: #'+theme.SourceCode.color;
+    if (theme.SourceCode.background) style+='background-color: #'+theme.SourceCode.background;
+    print(style+"}\n");
+  }%>
+  <%_.forEach(theme.tokens, function(token) {
+      var styles = [];
+      if (token.color) styles.push("color: #"+ token.color);
+      if (token.background) styles.push("background-color: #"+ token.background);
+      if (token.bold) styles.push("font-weight: bold;");
+      if (token.italic) styles.push("font-style: italic;");
+      if (token.underline) styles.push("text-decoration: underline;");
+      if (styles.length>0)
+        print("code > span."+token.name+" {"+styles.join(";")+"}\n");
+    });
+  %>
   </style>
-$endif$
 $for(css)$
   <link rel="stylesheet" href="$css$" />
 $endfor$
