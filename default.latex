@@ -62,12 +62,28 @@ $endif$
 $if(lhs)$
 \lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
 $endif$
-$if(highlighting-macros)$
-$highlighting-macros$
-$endif$
-$if(verbatim-in-note)$
+
+\usepackage{color}
 \usepackage{fancyvrb}
-$endif$
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+<% if (theme.SourceCode && theme.SourceCode.background) { %>
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{<%= theme.SourceCode.rgb %>}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}");
+<% } else { %>
+\newenvironment{Shaded}{}{}
+<% } _.forEach(theme.tokens, function (token) {
+  var t = '{#1}';
+  if (token.bold) t = '\\textbf{'+t+'}';
+  if (token.italic) t = '\\textit{'+t+'}';
+  if (token.underline) t = '\\underline{'+t+'}';
+%>
+\newcommand{\<%= token.name %>}[1]{\textcolor[RGB]{<%= token.rgb %>}{<%= t %>}}
+<% }); %>
+
 $if(tables)$
 \usepackage{longtable,booktabs}
 $endif$

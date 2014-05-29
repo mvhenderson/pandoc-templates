@@ -5,6 +5,14 @@ var async = require('async');
 var exec = require('child_process').exec;
 var _ = require('lodash');
 
+// Thanks: https://gist.github.com/lrvick/2080648
+function hexToRGB(hex){
+  var r = hex >> 16;
+  var g = hex >> 8 & 0xFF;
+  var b = hex & 0xFF;
+  return [r,g,b];
+};
+
 module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
@@ -40,13 +48,13 @@ module.exports = function (grunt) {
                 'templates': [ 'data/*'],
                 'writers': [
                     'html:html5',
-                    // 'latex',
-                    // 'pdf',
+                    'latex',
+                    'pdf',
                     // 'docx',
                     'epub:epub3'
                 ],
-                'args': '-s -F ./node_modules/.bin/codemirror-highlighter'
-                // 'args': '-s --highlight-style=zenburn'
+                'args': '-s' +
+                    ' -F ./node_modules/.bin/codemirror-highlighter'
             },
             samples: {
                 src: [ 'sample.md' ],
@@ -119,7 +127,15 @@ module.exports = function (grunt) {
             var themeName = pieces.slice(0,pieces.length-1).join('.');
             grunt.verbose.subhead(themeName);
 
+            // load theme and convert colors to R,G,B for latex
             var data = require(path.resolve(theme));
+            data.tokens.forEach(function (token) {
+              token.rgb = hexToRGB(parseInt(token.color,16)).join(',');
+            });
+            if (data.SourceCode && data.SourceCode.background) {
+                data.SourceCode.rgb = hexToRGB(parseInt(data.SourceCode.background,16)).join(',');
+            }
+
             var tmpl = {};
             files.forEach(function (file) {
                 var src = file.src[0];
