@@ -50,7 +50,7 @@ module.exports = function (grunt) {
                     'html:html5',
                     'latex',
                     'pdf',
-                    // 'docx',
+                    'docx',
                     'epub:epub3'
                 ],
                 'args': '-s' +

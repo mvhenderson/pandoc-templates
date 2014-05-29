@@ -40,7 +40,7 @@ $if(mathfont)$
 $endif$
 \fi
 % use upquote if available, for straight quotes in verbatim environments
-% mike henderson - no way: \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 $if(geometry)$
