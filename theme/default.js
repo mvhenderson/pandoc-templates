@@ -1,6 +1,6 @@
 // Based of the default CodeMirror stylesheet
 module.exports = {
-    // SourceCode:      {color: '000000', background: 'FFFFFF'},
+    SourceCode: {color: '000000', background: 'FFFFFF'},
     tokens: [
       {name: 'CodeNormal',      color: '000000'},
       {name: 'CodeAtom',        color: '221199'},

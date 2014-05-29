@@ -11,7 +11,8 @@ $if(quotes)$
   </style>
 $endif$
   <style type="text/css">
-  
+  pre, code {color: #000000;background-color: #FFFFFF;}
+
   code > span.CodeNormal {color: #000000}
 code > span.CodeAtom {color: #221199}
 code > span.CodeAttribute {color: #0000CC}

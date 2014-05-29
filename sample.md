@@ -4,7 +4,7 @@ This is a test of the custom templates.
 
 Just some `verbatim` text.
 
-A simple program `console.log('hello');`{.javascript} displayed inline.
+A simple program `console.log('hello');`{.javascript} displayed inline..
 
 ```javascript
 // A simple program displayed as a block

@@ -69,13 +69,15 @@ $endif$
 \newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
 % Add ',fontsize=\small' for more characters per line
-<% if (theme.SourceCode && theme.SourceCode.background) { %>
 \usepackage{framed}
 \definecolor{shadecolor}{RGB}{<%= theme.SourceCode.rgb %>}
 \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-<% } else { %>
-\newenvironment{Shaded}{}{}
-<% } _.forEach(theme.tokens, function (token) {
+% Mike Henderson: command to wrap verbatim in shaded box 
+\newcommand{\InlineCode}[1]{\colorbox{shadecolor}{{#1}}}
+% Mike Henderson: shrink up colorbox on inline code
+\newlength{\Width}%
+\setlength{\fboxsep}{1pt}
+<% _.forEach(theme.tokens, function (token) {
   var t = '{#1}';
   if (token.bold) t = '\\textbf{'+t+'}';
   if (token.italic) t = '\\textit{'+t+'}';

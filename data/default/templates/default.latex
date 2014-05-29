@@ -69,8 +69,14 @@ $endif$
 \newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
 % Add ',fontsize=\small' for more characters per line
-
-\newenvironment{Shaded}{}{}
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{255,255,255}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+% Mike Henderson: command to wrap verbatim in shaded box 
+\newcommand{\InlineCode}[1]{\colorbox{shadecolor}{{#1}}}
+% Mike Henderson: shrink up colorbox on inline code
+\newlength{\Width}%
+\setlength{\fboxsep}{1pt}
 
 \newcommand{\CodeNormal}[1]{\textcolor[RGB]{0,0,0}{{#1}}}
 
