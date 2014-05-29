@@ -69,20 +69,71 @@ $endif$
 \newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
 % Add ',fontsize=\small' for more characters per line
-<% if (theme.SourceCode && theme.SourceCode.background) { %>
+
 \usepackage{framed}
-\definecolor{shadecolor}{RGB}{<%= theme.SourceCode.rgb %>}
+\definecolor{shadecolor}{RGB}{253,246,227}
 \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-<% } else { %>
-\newenvironment{Shaded}{}{}
-<% } _.forEach(theme.tokens, function (token) {
-  var t = '{#1}';
-  if (token.bold) t = '\\textbf{'+t+'}';
-  if (token.italic) t = '\\textit{'+t+'}';
-  if (token.underline) t = '\\underline{'+t+'}';
-%>
-\newcommand{\<%= token.name %>}[1]{\textcolor[RGB]{<%= token.rgb %>}{<%= t %>}}
-<% }); %>
+
+\newcommand{\CodeNormal}[1]{\textcolor[RGB]{101,123,131}{{#1}}}
+
+\newcommand{\CodeAtom}[1]{\textcolor[RGB]{211,54,130}{{#1}}}
+
+\newcommand{\CodeAttribute}[1]{\textcolor[RGB]{42,161,152}{{#1}}}
+
+\newcommand{\CodeBracket}[1]{\textcolor[RGB]{203,75,22}{{#1}}}
+
+\newcommand{\CodeBuiltin}[1]{\textcolor[RGB]{211,54,130}{{#1}}}
+
+\newcommand{\CodeComment}[1]{\textcolor[RGB]{88,110,117}{\textit{{#1}}}}
+
+\newcommand{\CodeDef}[1]{\textcolor[RGB]{42,161,152}{{#1}}}
+
+\newcommand{\CodeEm}[1]{\textcolor[RGB]{101,123,131}{\textit{{#1}}}}
+
+\newcommand{\CodeError}[1]{\textcolor[RGB]{220,50,47}{\underline{{#1}}}}
+
+\newcommand{\CodeHeader}[1]{\textcolor[RGB]{88,110,117}{\textbf{{#1}}}}
+
+\newcommand{\CodeHr}[1]{\textcolor[RGB]{88,110,117}{{#1}}}
+
+\newcommand{\CodeInvalidchar}[1]{\textcolor[RGB]{220,50,47}{\underline{{#1}}}}
+
+\newcommand{\CodeKeyword}[1]{\textcolor[RGB]{203,75,22}{{#1}}}
+
+\newcommand{\CodeLink}[1]{\textcolor[RGB]{147,161,161}{\underline{{#1}}}}
+
+\newcommand{\CodeMeta}[1]{\textcolor[RGB]{133,153,0}{{#1}}}
+
+\newcommand{\CodeNegative}[1]{\textcolor[RGB]{101,123,131}{{#1}}}
+
+\newcommand{\CodeNumber}[1]{\textcolor[RGB]{211,54,130}{{#1}}}
+
+\newcommand{\CodeOperator}[1]{\textcolor[RGB]{108,113,196}{{#1}}}
+
+\newcommand{\CodePositive}[1]{\textcolor[RGB]{101,123,131}{{#1}}}
+
+\newcommand{\CodeProperty}[1]{\textcolor[RGB]{42,161,152}{{#1}}}
+
+\newcommand{\CodePunctuation}[1]{\textcolor[RGB]{101,123,131}{{#1}}}
+
+\newcommand{\CodeQualifier}[1]{\textcolor[RGB]{181,137,0}{{#1}}}
+
+\newcommand{\CodeQuote}[1]{\textcolor[RGB]{147,161,161}{{#1}}}
+
+\newcommand{\CodeString}[1]{\textcolor[RGB]{133,153,0}{{#1}}}
+
+\newcommand{\CodeStringB}[1]{\textcolor[RGB]{181,137,0}{{#1}}}
+
+\newcommand{\CodeStrong}[1]{\textcolor[RGB]{101,123,131}{\textbf{{#1}}}}
+
+\newcommand{\CodeTag}[1]{\textcolor[RGB]{147,161,161}{{#1}}}
+
+\newcommand{\CodeVariable}[1]{\textcolor[RGB]{38,139,210}{{#1}}}
+
+\newcommand{\CodeVariableB}[1]{\textcolor[RGB]{181,137,0}{{#1}}}
+
+\newcommand{\CodeVariableC}[1]{\textcolor[RGB]{108,113,196}{{#1}}}
+
 
 $if(tables)$
 \usepackage{longtable,booktabs}

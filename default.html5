@@ -21,8 +21,8 @@ $endif$
   <style type="text/css">
   <% if (theme.SourceCode) {
     var style = 'pre, code {';
-    if (theme.SourceCode.color) style+='color: #'+theme.SourceCode.color;
-    if (theme.SourceCode.background) style+='background-color: #'+theme.SourceCode.background;
+    if (theme.SourceCode.color) style+='color: #'+theme.SourceCode.color+';';
+    if (theme.SourceCode.background) style+='background-color: #'+theme.SourceCode.background + ';';
     print(style+"}\n");
   }%>
   <%_.forEach(theme.tokens, function(token) {

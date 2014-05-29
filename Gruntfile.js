@@ -48,13 +48,15 @@ module.exports = function (grunt) {
                 'templates': [ 'data/*'],
                 'writers': [
                     'html:html5',
+                    'xhtml:html',
                     'latex',
                     'pdf',
                     'docx',
                     'epub:epub3'
                 ],
                 'args': '-s' +
-                    ' -F ./node_modules/.bin/codemirror-highlighter'
+                    ' -F ./node_modules/.bin/codemirror-highlighter' +
+                    ' --no-highlight'  //supress injection into word
             },
             samples: {
                 src: [ 'sample.md' ],
