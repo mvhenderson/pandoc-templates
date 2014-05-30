@@ -282,7 +282,7 @@
     <w:basedOn w:val="BodyTextChar"/>
     <w:rPr>
       <w:rFonts w:ascii="Consolas" w:hAnsi="Consolas"/>
-      <w:sz w:val="22"/>
+      <w:sz w:val="18"/>
     </w:rPr>
   </w:style>
   <w:style w:customStyle="1" w:styleId="FootnoteRef" w:type="character">
@@ -309,6 +309,9 @@
       <w:wordWrap w:val="off"/>
       <% if (bkg) { %><w:shd w:fill="<%= bkg %>" w:val="clear"/><% } %>
     </w:pPr>
+    <w:rPr>
+      <w:noProof/>
+    </w:rPr>
   </w:style>
   <% _.forEach(theme.tokens, function (tk) { %>
   <w:style w:type="character" w:customStyle="1" w:styleId="<%= tk.name %>">

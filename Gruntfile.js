@@ -48,7 +48,6 @@ module.exports = function (grunt) {
                 'templates': [ 'data/*'],
                 'writers': [
                     'html:html5',
-                    'xhtml:html',
                     'latex',
                     'pdf',
                     'docx',

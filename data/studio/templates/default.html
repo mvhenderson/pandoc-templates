@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="date" content="$date-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+  <style type="text/css">code{white-space: pre;}</style>
+$if(quotes)$
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+$endif$
+  <style type="text/css">
+  pre, code {color: #000000;background-color: #F8F8F8;}
+
+  code > span.CodeNormal {color: #000000}
+code > span.CodeAtom {color: #880088}
+code > span.CodeAttribute {color: #880000}
+code > span.CodeBracket {color: #000000}
+code > span.CodeBuiltin {color: #0000FF}
+code > span.CodeComment {color: #008800}
+code > span.CodeDef {color: #000000}
+code > span.CodeError {color: #FF0000;text-decoration: underline;}
+code > span.CodeInvalidchar {color: #FF0000;text-decoration: underline;}
+code > span.CodeKeyword {color: #000088}
+code > span.CodeMeta {color: #FF0000}
+code > span.CodeNumber {color: #000000}
+code > span.CodeOperator {color: #000000}
+code > span.CodeProperty {color: #0000FF}
+code > span.CodeQualifier {color: #008888}
+code > span.CodeString {color: #008800}
+code > span.CodeStringB {color: #888800}
+code > span.CodeTag {color: #000088}
+code > span.CodeVariable {color: #888800}
+code > span.CodeVariableB {color: #FF00FF}
+code > span.CodeVariableC {color: #880000}
+code > span.CodeEm {color: #000000}
+code > span.CodeHeader {color: #000000}
+code > span.CodeHr {color: #000000}
+code > span.CodeLink {color: #000000}
+code > span.CodeNegative {color: #000000}
+code > span.CodePositive {color: #000000}
+code > span.CodePunctuation {color: #000000}
+code > span.CodeQuote {color: #000000}
+code > span.CodeStrong {color: #000000}
+
+  </style>
+$for(css)$
+  <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
+$endfor$
+$if(math)$
+  $math$
+$endif$
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
+<body>
+$for(include-before)$
+$include-before$
+$endfor$
+$if(title)$
+<div id="$idprefix$header">
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<h1 class="subtitle">$subtitle$</h1>
+$endif$
+$for(author)$
+<h2 class="author">$author$</h2>
+$endfor$
+$if(date)$
+<h3 class="date">$date$</h3>
+$endif$
+</div>
+$endif$
+$if(toc)$
+<div id="$idprefix$TOC">
+$toc$
+</div>
+$endif$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+</body>
+</html>
