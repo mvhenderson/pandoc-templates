@@ -1,9 +1,7 @@
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
-$if(fontfamily)$
-\usepackage{$fontfamily$}
-$else$
-\usepackage{lmodern}
-$endif$
+\documentclass[11pt]{$documentclass$}
+\usepackage{charter} 
+\usepackage{sourcecodepro}
+\usepackage[sfdefault]{FiraSans}
 $if(linestretch)$
 \usepackage{setspace}
 \setstretch{$linestretch$}
@@ -45,6 +43,8 @@ $endif$
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 $if(geometry)$
 \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$else$
+\usepackage[margin=.5in]{geometry}
 $endif$
 $if(natbib)$
 \usepackage{natbib}
@@ -66,9 +66,8 @@ $endif$
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
+\newcommand{\VERB}{\Verb[commandchars=\\\{\},fontsize=\small]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\footnotesize}
 \usepackage{framed}
 \definecolor{shadecolor}{RGB}{<%= theme.SourceCode.rgb %>}
 \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
