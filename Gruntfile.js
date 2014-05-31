@@ -55,6 +55,7 @@ module.exports = function (grunt) {
                 ],
                 'args': '-s' +
                     ' -F ./node_modules/.bin/codemirror-highlighter' +
+                    ' -F ./node_modules/.bin/docx-margin-narrow' +
                     ' --no-highlight'  //supress injection into word
             },
             samples: {
@@ -93,13 +94,14 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     dot: true,
-                    src: [ '.tmp/samples/**/*.{xml,rels}']
+                    src: [ '.tmp/unpacked/**/*.{xml,rels}']
                 }]
             }
         },
 
         shell: {
             docx: { // remove bogus docx changes from the working tree
+                options: { failOnError: false },
                 command: [
                     'git diff -w --quiet data/*/reference.docx',
                     'git checkout -- data/*/reference.docx'

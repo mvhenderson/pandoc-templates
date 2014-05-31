@@ -24,6 +24,7 @@
     "time-grunt": "~0.3.1",
     "grunt-zip": "~0.13.0",
     "pandoc-highlighter": "0.0.5",
-    "grunt-shell": "~0.7.0"
+    "grunt-shell": "~0.7.0",
+    "pandoc-docx-margin": "0.0.1"
   }
 }
