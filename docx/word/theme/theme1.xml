@@ -75,7 +75,7 @@
         <a:font script="Uigh" typeface="Microsoft Uighur"/>
       </a:majorFont>
       <a:minorFont>
-        <a:latin typeface="Cambria"/>
+        <a:latin typeface="Calibri"/>
         <a:ea typeface=""/>
         <a:cs typeface=""/>
         <a:font script="Jpan" typeface="ＭＳ 明朝"/>
