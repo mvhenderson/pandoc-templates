@@ -51,7 +51,7 @@ module.exports = function (grunt) {
                     'latex',
                     'pdf',
                     'docx',
-                    'epub:epub3'
+                    // 'epub:epub3'
                 ],
                 'args': '-s' +
                     ' -F ./node_modules/.bin/codemirror-highlighter' +
