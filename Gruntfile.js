@@ -97,12 +97,22 @@ module.exports = function (grunt) {
                 }]
             }
         },
+
+        shell: {
+            docx: { // remove bogus docx changes from the working tree
+                command: [
+                    'git diff -w --quiet data/*/reference.docx',
+                    'git checkout -- data/*/reference.docx'
+                ].join('&&')
+            }
+        }
     });
 
     grunt.registerTask('build', [
         'clean',
         'template',
-        'docx'
+        'docx',
+        'shell:docx'
     ]);
 
     grunt.registerTask('samples', [
