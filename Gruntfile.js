@@ -53,7 +53,12 @@ module.exports = function (grunt) {
                     'docx',
                     // 'epub:epub3'
                 ],
-                'args': '-s' +
+                'args': '-s' + // standalone
+                    ' -S' + //convert quotes, dashes, elip
+                    ' --toc' + // table of contents
+                    ' -N' + // numbered sections
+                    ' --mathml' + // for html5 
+                    ' --filter pandoc-citeproc' + // for citations
                     ' -F ./node_modules/.bin/codemirror-highlighter' +
                     ' -F ./node_modules/.bin/docx-margin-narrow' +
                     ' --no-highlight'  //supress injection into word
@@ -107,7 +112,8 @@ module.exports = function (grunt) {
                     'git checkout -- data/*/reference.docx'
                 ].join('&&')
             }
-        }
+        },
+
     });
 
     grunt.registerTask('build', [
@@ -215,6 +221,7 @@ module.exports = function (grunt) {
                 writer = (pieces.length > 1) ? pieces[1] : null;
 
                 files.forEach(function (file) {
+                    commands.push('cp *.jpg '+path.join(file.dest,theme)); //hack so html sample works
 
                     file.src.forEach(function (src) {
                         var base = src.replace(/[^\/.]+$/, ext);

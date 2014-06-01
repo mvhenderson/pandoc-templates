@@ -11,14 +11,20 @@ $if(date-meta)$
   <meta name="dcterms.date" content="$date-meta$">
 $endif$
   <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+  <link href='http://fonts.googleapis.com/css?family=Fira+Sans|Source+Code+Pro' rel='stylesheet' type='text/css'>
   <style type="text/css">code{white-space: pre;}</style>
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
 $if(quotes)$
   <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
 $endif$
   <style type="text/css">
+  html, body {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 11pt;
+  }
+  pre, code {
+    font-family: 'Source Code Pro', monospace; 
+    font-size: 10pt;
+  }
   pre, code {color: #657b83;background-color: #fdf6e3;}
 
   code > span.CodeNormal {color: #657b83}

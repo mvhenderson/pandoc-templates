@@ -145,6 +145,8 @@ $if(lang)$
 \fi
 $endif$
 
+\renewcommand{\abstractname}{Overview}
+
 $if(title)$
 \title{$title$}
 $endif$
