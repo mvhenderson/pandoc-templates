@@ -46,13 +46,6 @@ module.exports = function (grunt) {
         pandoc: {
             options: {
                 'templates': [ 'data/*'],
-                'writers': [
-                    'html:html5',
-                    'latex',
-                    'pdf',
-                    'docx',
-                    // 'epub:epub3'
-                ],
                 'args': '-s' + // standalone
                     ' -S' + //convert quotes, dashes, elip
                     ' --toc' + // table of contents
@@ -63,7 +56,23 @@ module.exports = function (grunt) {
                     ' -F ./node_modules/.bin/docx-margin-narrow' +
                     ' --no-highlight'  //supress injection into word
             },
-            samples: {
+            html: {
+                options: { writers: [ 'html:html5' ]},
+                src: [ 'sample.md' ],
+                dest: '.tmp/samples'
+            },
+            latex: {
+                options: { writers: [ 'latex' ]},
+                src: [ 'sample.md' ],
+                dest: '.tmp/samples'
+            },
+            pdf: {
+                options: { writers: [ 'pdf' ]},
+                src: [ 'sample.md' ],
+                dest: '.tmp/samples'
+            },
+            docx: {
+                options: { writers: [ 'docx' ]},
                 src: [ 'sample.md' ],
                 dest: '.tmp/samples'
             }
@@ -204,7 +213,7 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask('pandoc', 'process samples', function () {
         var options = this.options({
-            templates: [ 'data/default' ],
+            templates: [ 'data/studio' ],
             writers: [ 'html' ],
             args: '-s'
         });
