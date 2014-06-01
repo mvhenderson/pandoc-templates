@@ -74,7 +74,7 @@ Here is an explicit [link][explicit]. Here is an implicit link to [pandoc].
 
 ### Internal
 
-Here is a link to the [Tables](#tables) chapter. Doesn't work for Word it seems.
+Here is a link to the [Tables](#tables) chapter.
 
 ### Images
 
