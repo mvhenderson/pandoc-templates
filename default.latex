@@ -149,6 +149,9 @@ $endif$
 
 \usepackage[toc]{multitoc}
 \renewcommand*{\multicolumntoc}{2}
+\setlength{\columnsep}{20pt}
+\setlength{\columnseprule}{1pt}
+\renewcommand{\columnseprulecolor}{\color[RGB]{224,224,224}}
 
 $if(title)$
 \title{$title$}
