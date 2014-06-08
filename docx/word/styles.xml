@@ -23,7 +23,6 @@
     <w:pPr>
       <w:keepNext/>
       <w:keepLines/>
-      <w:jc w:val="center"/>
     </w:pPr>
   </w:style>
   <w:style w:type="paragraph" w:styleId="BlockQuote">
@@ -71,7 +70,6 @@
     <w:pPr>
       <w:keepNext/>
       <w:keepLines/>
-      <w:jc w:val="center"/>
     </w:pPr>
   </w:style>
   <w:style w:type="character" w:default="1" w:styleId="DefaultParagraphFont">
@@ -252,6 +250,14 @@
   <w:style w:type="paragraph" w:default="1" w:styleId="Normal">
     <w:name w:val="Normal"/>
     <w:qFormat/>
+  </w:style>
+  <w:style w:styleId="NoSpacing" w:type="paragraph">
+    <w:name w:val="No Spacing"/>
+    <w:uiPriority w:val="1"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+    </w:pPr>
   </w:style>
   <w:style w:type="paragraph" w:styleId="TableCaption">
     <w:name w:val="Table Caption"/>
