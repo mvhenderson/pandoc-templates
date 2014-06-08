@@ -18,22 +18,34 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt);
 
     grunt.initConfig({
+
+        watch: {
+            docx: {
+                files: [ 'docx/**/*.xml', 'sample.md', 'theme/**' ],
+                tasks: [ 'word' ]
+            }
+        },
+
         clean: {
             build: 'data',
-            tmp: ['.tmp/**', '!.tmp' ]
+            tmp: ['.tmp/**', '!.tmp' ],
+            docx: 'data/*/*.docx'
         },
 
         template: {
+            options: {
+                themes: ['theme/*']
+            },
             build: {
-                options: {
-                    themes: ['theme/*']
-                },
                 files: [{
                     expand: true,
                     cwd: '.',
                     dest: 'data/theme/templates',
                     src: ['default.*']
-                },{
+                }]
+            },
+            docx: {
+                files: [{
                     expand: true,
                     dot: true,
                     cwd: 'docx',
@@ -104,7 +116,7 @@ module.exports = function (grunt) {
         },
 
         tidy: {
-            xml: {
+            unpacked: {
                 files: [{
                     expand: true,
                     dot: true,
@@ -120,6 +132,14 @@ module.exports = function (grunt) {
                     'git diff -w --quiet data/*/reference.docx',
                     'git checkout -- data/*/reference.docx'
                 ].join('&&')
+            },
+
+            closeWord: {
+                options: { failOnError: false },
+                command: 'killall "Microsoft Word"'
+            },
+            openWord: {
+                command: 'open .tmp/samples/studio/sample.docx'
             }
         },
 
@@ -132,10 +152,22 @@ module.exports = function (grunt) {
         'shell:docx'
     ]);
 
+    grunt.registerTask('word', [
+        'clean:docx',
+        'template:docx',
+        'docx',
+        'shell:docx',
+        'pandoc:docx',
+        'unpack:samples',
+        'tidy:unpacked',
+        'shell:closeWord',
+        'shell:openWord'
+    ]);
+
     grunt.registerTask('samples', [
         'pandoc',
-        'unpack',
-        'tidy'
+        'unpack:samples',
+        'tidy:unpacked'
     ]);
 
     grunt.registerTask('default', [
