@@ -1,13 +1,15 @@
 ---
-title: Custom Templates
-author: Michael Henderson
-date: 2014-05-31
+data:
+  title: Custom Templates
+  author: Michael Henderson
+  date: 2014-05-31
 version: 0.1
 tags: [ pandoc, examples ]
 abstract: |
-  this is the abstract.
+  This is the abstract.
 
-  it can have multiple paragraphs.
+  It can have multiple paragraphs, but not for docx.
+  
 references:
 - id: spec
   type: article

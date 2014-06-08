@@ -64,6 +64,9 @@ module.exports = function (grunt) {
                     ' -N' + // numbered sections
                     ' --mathml' + // for html5 
                     ' --filter pandoc-citeproc' + // for citations
+                    ' -M docx-title=./title.xml' +
+                    ' -F ./node_modules/.bin/docx-title' +
+                    ' -F ./node_modules/.bin/docx-header-num' +
                     ' -F ./node_modules/.bin/codemirror-highlighter' +
                     ' -F ./node_modules/.bin/docx-margin-narrow' +
                     ' --no-highlight'  //supress injection into word

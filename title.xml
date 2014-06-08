@@ -1,0 +1,12 @@
+<% if (data.title) { %>
+  <w:p><w:pPr><w:pStyle w:val="Title"/></w:pPr><w:r><w:t><%= data.title %></w:t></w:r></w:p>
+<% } %>
+<% if (data.author) { %>
+  <w:p><w:pPr><w:pStyle w:val="Authors"/></w:pPr><w:r><w:t><%= data.author %></w:t></w:r></w:p>
+<% } %>
+<% if (data.date) { %>
+  <w:p><w:pPr><w:pStyle w:val="Date"/></w:pPr><w:r><w:t><%= data.date %></w:t></w:r></w:p>
+<% } %>
+<% if (data.abstract) { %>
+  <w:p><w:pPr><w:pStyle w:val="Normal"/></w:pPr><w:r><w:t><%= data.abstract %></w:t></w:r></w:p>
+<% } %>
