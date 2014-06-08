@@ -4,14 +4,14 @@
     <w:rPrDefault>
       <w:rPr>
         <w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorHAnsi" w:hAnsiTheme="minorHAnsi" w:cstheme="minorBidi"/>
-        <w:sz w:val="24"/>
-        <w:szCs w:val="24"/>
+        <w:sz w:val="22"/>
+        <w:szCs w:val="22"/>
         <w:lang w:val="en-US" w:eastAsia="en-US" w:bidi="ar-SA"/>
       </w:rPr>
     </w:rPrDefault>
     <w:pPrDefault>
       <w:pPr>
-        <w:spacing w:after="200"/>
+        <w:spacing w:after="160"/>
       </w:pPr>
     </w:pPrDefault>
   </w:docDefaults>
@@ -120,16 +120,14 @@
     <w:pPr>
       <w:keepNext/>
       <w:keepLines/>
-      <w:spacing w:before="480" w:after="0"/>
+      <w:spacing w:before="240" w:after="0"/>
       <w:outlineLvl w:val="0"/>
     </w:pPr>
     <w:rPr>
       <w:rFonts w:asciiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:hAnsiTheme="majorHAnsi" w:cstheme="majorBidi"/>
-      <w:b/>
-      <w:bCs/>
-      <w:color w:val="345A8A" w:themeColor="accent1" w:themeShade="B5"/>
-      <w:sz w:val="36"/>
-      <w:szCs w:val="36"/>
+      <w:color w:val="345A8A" w:themeColor="accent1" w:themeShade="BF"/>
+      <w:sz w:val="32"/>
+      <w:szCs w:val="32"/>
     </w:rPr>
   </w:style>
   <w:style w:type="paragraph" w:styleId="Heading2">
@@ -142,16 +140,14 @@
     <w:pPr>
       <w:keepNext/>
       <w:keepLines/>
-      <w:spacing w:before="200" w:after="0"/>
+      <w:spacing w:before="40" w:after="0"/>
       <w:outlineLvl w:val="1"/>
     </w:pPr>
     <w:rPr>
       <w:rFonts w:asciiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:hAnsiTheme="majorHAnsi" w:cstheme="majorBidi"/>
-      <w:b/>
-      <w:bCs/>
-      <w:color w:val="4F81BD" w:themeColor="accent1"/>
-      <w:sz w:val="32"/>
-      <w:szCs w:val="32"/>
+      <w:color w:val="4F81BD" w:themeColor="accent1" w:themeShade="BF"/>
+      <w:sz w:val="28"/>
+      <w:szCs w:val="28"/>
     </w:rPr>
   </w:style>
   <w:style w:type="paragraph" w:styleId="Heading3">
@@ -164,16 +160,14 @@
     <w:pPr>
       <w:keepNext/>
       <w:keepLines/>
-      <w:spacing w:before="200" w:after="0"/>
-      <w:outlineLvl w:val="1"/>
+      <w:spacing w:before="40" w:after="0"/>
+      <w:outlineLvl w:val="2"/>
     </w:pPr>
     <w:rPr>
       <w:rFonts w:asciiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:hAnsiTheme="majorHAnsi" w:cstheme="majorBidi"/>
-      <w:b/>
-      <w:bCs/>
-      <w:color w:val="4F81BD" w:themeColor="accent1"/>
-      <w:sz w:val="28"/>
-      <w:szCs w:val="28"/>
+      <w:color w:val="4F81BD" w:themeColor="accent1" w:themeShade="80"/>
+      <w:sz w:val="24"/>
+      <w:szCs w:val="24"/>
     </w:rPr>
   </w:style>
   <w:style w:type="paragraph" w:styleId="Heading4">
@@ -186,16 +180,16 @@
     <w:pPr>
       <w:keepNext/>
       <w:keepLines/>
-      <w:spacing w:before="200" w:after="0"/>
-      <w:outlineLvl w:val="1"/>
+      <w:spacing w:before="40" w:after="0"/>
+      <w:outlineLvl w:val="3"/>
     </w:pPr>
     <w:rPr>
       <w:rFonts w:asciiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:hAnsiTheme="majorHAnsi" w:cstheme="majorBidi"/>
-      <w:b/>
-      <w:bCs/>
-      <w:color w:val="4F81BD" w:themeColor="accent1"/>
-      <w:sz w:val="24"/>
-      <w:szCs w:val="24"/>
+      <w:i/>
+      <w:iCs/>
+      <w:color w:val="4F81BD" w:themeColor="accent1" w:themeShade="BF"/>
+      <w:sz w:val="22"/>
+      <w:szCs w:val="22"/>
     </w:rPr>
   </w:style>
   <w:style w:type="paragraph" w:styleId="Heading5">
@@ -208,16 +202,34 @@
     <w:pPr>
       <w:keepNext/>
       <w:keepLines/>
-      <w:spacing w:before="200" w:after="0"/>
-      <w:outlineLvl w:val="1"/>
+      <w:spacing w:before="40" w:after="0"/>
+      <w:outlineLvl w:val="4"/>
     </w:pPr>
     <w:rPr>
       <w:rFonts w:asciiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:hAnsiTheme="majorHAnsi" w:cstheme="majorBidi"/>
-      <w:i/>
-      <w:iCs/>
-      <w:color w:val="4F81BD" w:themeColor="accent1"/>
-      <w:sz w:val="24"/>
-      <w:szCs w:val="24"/>
+      <w:color w:val="4F81BD" w:themeColor="accent1" w:themeShade="BF"/>
+      <w:sz w:val="22"/>
+      <w:szCs w:val="22"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:styleId="Heading6">
+    <w:name w:val="Heading 6"/>
+    <w:basedOn w:val="Normal"/>
+    <w:next w:val="Normal"/>
+    <w:uiPriority w:val="9"/>
+    <w:unhideWhenUsed/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:keepNext/>
+      <w:keepLines/>
+      <w:spacing w:before="40" w:after="0"/>
+      <w:outlineLvl w:val="5"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:asciiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:hAnsiTheme="majorHAnsi" w:cstheme="majorBidi"/>
+      <w:color w:val="4F81BD" w:themeColor="accent1" w:themeShade="80"/>
+      <w:sz w:val="22"/>
+      <w:szCs w:val="22"/>
     </w:rPr>
   </w:style>
   <w:style w:type="paragraph" w:styleId="ImageCaption">
@@ -240,9 +252,6 @@
   <w:style w:type="paragraph" w:default="1" w:styleId="Normal">
     <w:name w:val="Normal"/>
     <w:qFormat/>
-    <w:pPr>
-      <w:spacing w:before="180" w:after="180"/>
-    </w:pPr>
   </w:style>
   <w:style w:type="paragraph" w:styleId="TableCaption">
     <w:name w:val="Table Caption"/>
