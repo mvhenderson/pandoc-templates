@@ -65,6 +65,7 @@ module.exports = function (grunt) {
                     ' --mathml' + // for html5 
                     ' --filter pandoc-citeproc' + // for citations
                     ' -M docx-title=./title.xml' +
+                    ' -F ./node_modules/.bin/docx-toc' +
                     ' -F ./node_modules/.bin/docx-title' +
                     ' -F ./node_modules/.bin/docx-header-num' +
                     ' -F ./node_modules/.bin/codemirror-highlighter' +
