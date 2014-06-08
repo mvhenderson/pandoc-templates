@@ -296,7 +296,7 @@
     <w:basedOn w:val="BodyTextChar"/>
     <w:rPr>
       <w:rFonts w:ascii="Consolas" w:hAnsi="Consolas"/>
-      <w:sz w:val="22"/>
+      <w:sz w:val="18"/>
     </w:rPr>
   </w:style>
   <% var bkg = (theme.SourceCode) ? theme.SourceCode.background : false; %>
