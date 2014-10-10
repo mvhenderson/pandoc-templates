@@ -95,7 +95,8 @@
     <w:pPr>
       <w:keepNext/>
       <w:keepLines/>
-      <w:spacing w:after="300" w:before="300"/>
+      <w:spacing w:after="0" w:before="120"/>
+      <w:ind w:left="1440" w:right="1440"/>
     </w:pPr>
     <w:rPr>
       <w:sz w:val="20"/>
