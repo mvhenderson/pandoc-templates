@@ -157,21 +157,25 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('word', [
-        'clean:docx',
-        'template:docx',
-        'docx',
-        'pandoc:docx',
+        'reference',
         'shell:docx',
         'unpack:samples',
-        'tidy:unpacked',
-        'shell:closeWord',
-        'shell:openWord'
+        'tidy:unpacked'
     ]);
 
     grunt.registerTask('samples', [
         'pandoc',
         'unpack:samples',
         'tidy:unpacked'
+    ]);
+
+    grunt.registerTask('reference', [
+        'clean:docx',
+        'template:docx',
+        'docx',
+        'pandoc:docx',
+        'shell:closeWord',
+        'shell:openWord'
     ]);
 
     grunt.registerTask('default', [
