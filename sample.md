@@ -1,5 +1,6 @@
 ---
 title: Custom Templates
+subtitle: Using pandoc for technical documentation
 author: Michael Henderson
 date: 2014-05-31
 version: 0.1
