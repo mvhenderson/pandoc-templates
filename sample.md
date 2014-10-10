@@ -1,8 +1,7 @@
 ---
-data:
-  title: Custom Templates
-  author: Michael Henderson
-  date: 2014-05-31
+title: Custom Templates
+author: Michael Henderson
+date: 2014-05-31
 version: 0.1
 tags: [ pandoc, examples ]
 abstract: |
@@ -263,9 +262,11 @@ Term 2 with *inline markup*
 
 Term 1
   ~ Definition 1
+
 Term 2
-  ~ Definition 2a
-  ~ Definition 2b
+~   Definition 2a
+
+    Definition 2b
 
 ## Example Lists
 

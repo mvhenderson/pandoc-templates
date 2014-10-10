@@ -8,5 +8,5 @@
   <w:p><w:pPr><w:pStyle w:val="Date"/></w:pPr><w:r><w:t><%= data.date %></w:t></w:r></w:p>
 <% } %>
 <% if (data.abstract) { %>
-  <w:p><w:pPr><w:pStyle w:val="Normal"/></w:pPr><w:r><w:t><%= data.abstract %></w:t></w:r></w:p>
+  <w:p><w:pPr><w:pStyle w:val="Abstract"/></w:pPr><w:r><w:t><%= data.abstract %></w:t></w:r></w:p>
 <% } %>

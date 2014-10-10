@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0"?>
 <a:theme xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" name="Office Theme">
   <a:themeElements>
     <a:clrScheme name="Office">
       <a:dk1>
-        <a:sysClr val="windowText" lastClr="000000"/>
+        <a:sysClr lastClr="000000" val="windowText"/>
       </a:dk1>
       <a:lt1>
-        <a:sysClr val="window" lastClr="FFFFFF"/>
+        <a:sysClr lastClr="FFFFFF" val="window"/>
       </a:lt1>
       <a:dk2>
         <a:srgbClr val="1F497D"/>
@@ -44,10 +44,10 @@
         <a:latin panose="020F0302020204030204" typeface="Calibri Light"/>
         <a:ea typeface=""/>
         <a:cs typeface=""/>
-        <a:font script="Jpan" typeface="ＭＳ ゴシック"/>
-        <a:font script="Hang" typeface="맑은 고딕"/>
-        <a:font script="Hans" typeface="宋体"/>
-        <a:font script="Hant" typeface="新細明體"/>
+        <a:font script="Jpan" typeface="&#xFF2D;&#xFF33; &#x30B4;&#x30B7;&#x30C3;&#x30AF;"/>
+        <a:font script="Hang" typeface="&#xB9D1;&#xC740; &#xACE0;&#xB515;"/>
+        <a:font script="Hans" typeface="&#x5B8B;&#x4F53;"/>
+        <a:font script="Hant" typeface="&#x65B0;&#x7D30;&#x660E;&#x9AD4;"/>
         <a:font script="Arab" typeface="Times New Roman"/>
         <a:font script="Hebr" typeface="Times New Roman"/>
         <a:font script="Thai" typeface="Angsana New"/>
@@ -78,10 +78,10 @@
         <a:latin panose="020F0502020204030204" typeface="Calibri"/>
         <a:ea typeface=""/>
         <a:cs typeface=""/>
-        <a:font script="Jpan" typeface="ＭＳ 明朝"/>
-        <a:font script="Hang" typeface="맑은 고딕"/>
-        <a:font script="Hans" typeface="宋体"/>
-        <a:font script="Hant" typeface="新細明體"/>
+        <a:font script="Jpan" typeface="&#xFF2D;&#xFF33; &#x660E;&#x671D;"/>
+        <a:font script="Hang" typeface="&#xB9D1;&#xC740; &#xACE0;&#xB515;"/>
+        <a:font script="Hans" typeface="&#x5B8B;&#x4F53;"/>
+        <a:font script="Hant" typeface="&#x65B0;&#x7D30;&#x660E;&#x9AD4;"/>
         <a:font script="Arab" typeface="Arial"/>
         <a:font script="Hebr" typeface="Arial"/>
         <a:font script="Thai" typeface="Cordia New"/>
@@ -158,7 +158,7 @@
         </a:gradFill>
       </a:fillStyleLst>
       <a:lnStyleLst>
-        <a:ln w="9525" cap="flat" cmpd="sng" algn="ctr">
+        <a:ln algn="ctr" cap="flat" cmpd="sng" w="9525">
           <a:solidFill>
             <a:schemeClr val="phClr">
               <a:shade val="95000"/>
@@ -167,13 +167,13 @@
           </a:solidFill>
           <a:prstDash val="solid"/>
         </a:ln>
-        <a:ln w="25400" cap="flat" cmpd="sng" algn="ctr">
+        <a:ln algn="ctr" cap="flat" cmpd="sng" w="25400">
           <a:solidFill>
             <a:schemeClr val="phClr"/>
           </a:solidFill>
           <a:prstDash val="solid"/>
         </a:ln>
-        <a:ln w="38100" cap="flat" cmpd="sng" algn="ctr">
+        <a:ln algn="ctr" cap="flat" cmpd="sng" w="38100">
           <a:solidFill>
             <a:schemeClr val="phClr"/>
           </a:solidFill>
@@ -183,7 +183,7 @@
       <a:effectStyleLst>
         <a:effectStyle>
           <a:effectLst>
-            <a:outerShdw blurRad="40000" dist="20000" dir="5400000" rotWithShape="0">
+            <a:outerShdw blurRad="40000" dir="5400000" dist="20000" rotWithShape="0">
               <a:srgbClr val="000000">
                 <a:alpha val="38000"/>
               </a:srgbClr>
@@ -192,7 +192,7 @@
         </a:effectStyle>
         <a:effectStyle>
           <a:effectLst>
-            <a:outerShdw blurRad="40000" dist="23000" dir="5400000" rotWithShape="0">
+            <a:outerShdw blurRad="40000" dir="5400000" dist="23000" rotWithShape="0">
               <a:srgbClr val="000000">
                 <a:alpha val="35000"/>
               </a:srgbClr>
@@ -201,7 +201,7 @@
         </a:effectStyle>
         <a:effectStyle>
           <a:effectLst>
-            <a:outerShdw blurRad="40000" dist="23000" dir="5400000" rotWithShape="0">
+            <a:outerShdw blurRad="40000" dir="5400000" dist="23000" rotWithShape="0">
               <a:srgbClr val="000000">
                 <a:alpha val="35000"/>
               </a:srgbClr>
@@ -211,12 +211,12 @@
             <a:camera prst="orthographicFront">
               <a:rot lat="0" lon="0" rev="0"/>
             </a:camera>
-            <a:lightRig rig="threePt" dir="t">
+            <a:lightRig dir="t" rig="threePt">
               <a:rot lat="0" lon="0" rev="1200000"/>
             </a:lightRig>
           </a:scene3d>
           <a:sp3d>
-            <a:bevelT w="63500" h="25400"/>
+            <a:bevelT h="25400" w="63500"/>
           </a:sp3d>
         </a:effectStyle>
       </a:effectStyleLst>
@@ -247,7 +247,7 @@
             </a:gs>
           </a:gsLst>
           <a:path path="circle">
-            <a:fillToRect l="50000" t="-80000" r="50000" b="180000"/>
+            <a:fillToRect b="180000" l="50000" r="50000" t="-80000"/>
           </a:path>
         </a:gradFill>
         <a:gradFill rotWithShape="1">
@@ -266,7 +266,7 @@
             </a:gs>
           </a:gsLst>
           <a:path path="circle">
-            <a:fillToRect l="50000" t="50000" r="50000" b="50000"/>
+            <a:fillToRect b="50000" l="50000" r="50000" t="50000"/>
           </a:path>
         </a:gradFill>
       </a:bgFillStyleLst>

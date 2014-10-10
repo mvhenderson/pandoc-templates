@@ -62,11 +62,11 @@ module.exports = function (grunt) {
                     ' -S' + //convert quotes, dashes, elip
                     ' --toc' + // table of contents
                     ' -N' + // numbered sections
-                    ' --mathml' + // for html5 
+                    ' --mathml' + // for html5
                     ' --filter pandoc-citeproc' + // for citations
                     ' -M docx-title=./title.xml' +
                     ' -F ./node_modules/.bin/docx-toc' +
-                    ' -F ./node_modules/.bin/docx-title' +
+                    //' -F ./node_modules/.bin/docx-title' +
                     ' -F ./node_modules/.bin/docx-header-num' +
                     ' -F ./node_modules/.bin/codemirror-highlighter' +
                     ' -F ./node_modules/.bin/docx-margin-narrow' +
@@ -309,9 +309,10 @@ module.exports = function (grunt) {
             });
         });
 
-        var cmd = 'xmllint --format '; // 'tidy -xml -i -utf8 -q -w 98';
+        //var cmd = 'xmllint --format '; // 'tidy -xml -i -utf8 -q -w 98';
         async.each(files, function (filepath, callback) {
-            exec(cmd+filepath, function (error, stdout, stderr) {
+            var cmd = 'xmllint --c14n '+filepath+' | xmllint --format -'
+            exec(cmd, function (error, stdout, stderr) {
                 grunt.log.write('  ' + filepath + ' ');
                 if (error)  { return callback(error); }
                 if (stderr) { return callback(new Error(stderr)); }
