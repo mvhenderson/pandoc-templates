@@ -366,4 +366,63 @@
     </w:rPr>
   </w:style>
   <% }); %>
+  <w:style w:styleId="TOC1" w:type="paragraph">
+    <w:name w:val="toc 1"/>
+    <w:basedOn w:val="Normal"/>
+    <w:next w:val="Normal"/>
+    <w:autoRedefine/>
+    <w:uiPriority w:val="39"/>
+    <w:pPr>
+      <w:tabs>
+        <w:tab w:leader="dot" w:pos="3110" w:val="right"/>
+      </w:tabs>
+      <w:spacing w:after="100" w:before="120"/>
+    </w:pPr>
+    <w:rPr>
+      <w:b/>
+      <w:sz w:val="20"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:styleId="TOC2" w:type="paragraph">
+    <w:name w:val="toc 2"/>
+    <w:basedOn w:val="Normal"/>
+    <w:next w:val="Normal"/>
+    <w:autoRedefine/>
+    <w:uiPriority w:val="39"/>
+    <w:pPr>
+      <w:spacing w:after="100" w:before="120"/>
+      <w:ind w:left="245"/>
+    </w:pPr>
+    <w:rPr>
+      <w:sz w:val="20"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:styleId="TOC3" w:type="paragraph">
+    <w:name w:val="toc 3"/>
+    <w:basedOn w:val="Normal"/>
+    <w:next w:val="Normal"/>
+    <w:autoRedefine/>
+    <w:uiPriority w:val="39"/>
+    <w:pPr>
+      <w:spacing w:after="100" w:before="120"/>
+      <w:ind w:left="475"/>
+    </w:pPr>
+    <w:rPr>
+      <w:sz w:val="20"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:styleId="TOCHeading" w:type="paragraph">
+    <w:name w:val="TOC Heading"/>
+    <w:basedOn w:val="Heading1"/>
+    <w:next w:val="Normal"/>
+    <w:pPr>
+      <w:pageBreakBefore w:val="0"/>
+      <w:spacing w:after="240"/>
+      <w:jc w:val="center"/>
+      <w:outlineLvl w:val="9"/>
+    </w:pPr>
+    <w:rPr>
+      <w:u w:val="single"/>
+    </w:rPr>
+  </w:style>
 </w:styles>
