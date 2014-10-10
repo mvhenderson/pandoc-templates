@@ -120,6 +120,7 @@
     <w:pPr>
       <w:keepNext/>
       <w:keepLines/>
+      <w:pageBreakBefore/>
       <w:spacing w:after="0" w:before="480"/>
       <w:outlineLvl w:val="0"/>
     </w:pPr>
