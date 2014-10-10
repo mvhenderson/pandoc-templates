@@ -294,7 +294,6 @@
   <w:style w:styleId="TableCaption" w:type="paragraph">
     <w:name w:val="Table Caption"/>
     <w:basedOn w:val="Normal"/>
-    <w:link w:val="BodyTextChar"/>
     <w:pPr>
       <w:spacing w:after="120" w:before="0"/>
     </w:pPr>
@@ -305,7 +304,6 @@
   <w:style w:styleId="ImageCaption" w:type="paragraph">
     <w:name w:val="Image Caption"/>
     <w:basedOn w:val="Normal"/>
-    <w:link w:val="BodyTextChar"/>
     <w:pPr>
       <w:spacing w:after="120" w:before="0"/>
     </w:pPr>
@@ -321,6 +319,7 @@
   <w:style w:customStyle="1" w:styleId="VerbatimChar" w:type="character">
     <w:name w:val="Verbatim Char"/>
     <w:basedOn w:val="BodyTextChar"/>
+    <w:link w:val="SourceCode"/>
     <w:rPr>
       <w:rFonts w:ascii="Consolas" w:hAnsi="Consolas"/>
       <w:sz w:val="22"/>
