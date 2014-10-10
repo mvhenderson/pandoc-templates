@@ -133,7 +133,7 @@ module.exports = function (grunt) {
             docx: { // remove bogus docx changes from the working tree
                 options: { failOnError: false },
                 command: [
-                    'git diff -w --quiet data/*/reference.docx',
+                    'git status --porcelain data/*/reference.docx',
                     'git checkout -- data/*/reference.docx'
                 ].join('&&')
             },
