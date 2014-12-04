@@ -342,7 +342,7 @@ Table: Demonstration of pipe table syntax.
 
 Testing [@spec] cite [@site].
 
-## Footnotes.
+## Footnotes
 
 The following section provides sample equations.^[`HTML` output uses _MathML_ for modern browsers]
 

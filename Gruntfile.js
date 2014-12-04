@@ -73,7 +73,18 @@ module.exports = function (grunt) {
                     ' --no-highlight'  //supress injection into word
             },
             html: {
-                options: { writers: [ 'html:html5' ]},
+                options: {
+                    writers: [ 'html:html5' ],
+                    'args': [
+                        '-s',
+                        '-S',
+                        '--toc',
+                        '--toc-depth 2',
+                        '-N',
+                        '-F ./node_modules/.bin/codemirror-highlighter',
+                        '--no-highlight'
+                    ].join(' ')
+                },
                 src: [ 'sample.md' ],
                 dest: '.tmp/samples'
             },
@@ -147,7 +158,29 @@ module.exports = function (grunt) {
             }
         },
 
+        dom_massager: {
+            html: {
+                options: {
+                    writeDom: true,
+                    selectors: {
+                        "#toc ul": {
+                            action: "addClass",
+                            input: "nav"
+                        }
+                    }
+                },
+                src: [ '.tmp/samples/studio/sample.html' ],
+                dest: '.tmp/samples/studio/'
+
+            }
+        }
     });
+
+    grunt.registerTask('html', [
+        'template:build',
+        'pandoc:html',
+        'dom_massager'
+    ]);
 
     grunt.registerTask('build', [
         'clean',
