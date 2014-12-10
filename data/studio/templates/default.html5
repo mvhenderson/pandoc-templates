@@ -153,6 +153,7 @@ $if(title)$
         <ul class="nav navbar-nav pull-right">
             $for(author)$<li><p class="navbar-text">$author$</p></li>$endfor$
             $if(date)$<li><p class="navbar-text">$date$</p></li>$endif$
+            $if(version)$<li><p class="navbar-text">$version$</p></li>$endif$
         </ul>
     </div>
 </nav>

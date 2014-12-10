@@ -227,6 +227,9 @@ $endfor$
 $if(title)$
 \maketitle
 $endif$
+$if(version)$
+\centerline{$version$}
+$endif$
 $if(abstract)$
 \begin{abstract}
 $abstract$

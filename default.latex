@@ -1,5 +1,5 @@
 \documentclass[11pt]{$documentclass$}
-\usepackage{charter} 
+\usepackage{charter}
 \usepackage{sourcecodepro}
 \usepackage[sfdefault]{FiraSans}
 $if(linestretch)$
@@ -11,7 +11,10 @@ $endif$
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
+  \usepackage[utf8]{inputenx}
+  \input{ix-utf8enc.dfu}
+  \DeclareUnicodeCharacter{2229}{\ensuremath\cap}
+  \DeclareUnicodeCharacter{2205}{\ensuremath\varnothing}
 $if(euro)$
   \usepackage{eurosym}
 $endif$
@@ -82,7 +85,7 @@ $endif$
 \usepackage{framed}
 \definecolor{shadecolor}{RGB}{<%= theme.SourceCode.rgb %>}
 \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-% Mike Henderson: command to wrap verbatim in shaded box 
+% Mike Henderson: command to wrap verbatim in shaded box
 \newcommand{\InlineCode}[1]{\colorbox{shadecolor}{{#1}}}
 % Mike Henderson: shrink up colorbox on inline code
 \newlength{\Width}%
@@ -170,6 +173,9 @@ $endfor$
 \begin{document}
 $if(title)$
 \maketitle
+$endif$
+$if(version)$
+\centerline{$version$}
 $endif$
 $if(abstract)$
 \begin{abstract}
