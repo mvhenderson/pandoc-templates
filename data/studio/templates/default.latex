@@ -1,4 +1,4 @@
-\documentclass[11pt]{$documentclass$}
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 \usepackage{charter}
 \usepackage{sourcecodepro}
 \usepackage[sfdefault]{FiraSans}
@@ -11,10 +11,12 @@ $endif$
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenx}
-  \input{ix-utf8enc.dfu}
-  \DeclareUnicodeCharacter{2229}{\ensuremath\cap}
-  \DeclareUnicodeCharacter{2205}{\ensuremath\varnothing}
+  % Mike Henderson add support for a few extra unicode characters
+      %\usepackage[utf8]{inputenc}
+      \usepackage[utf8]{inputenx}
+      \input{ix-utf8enc.dfu}
+      \DeclareUnicodeCharacter{2229}{\ensuremath\cap}
+      \DeclareUnicodeCharacter{2205}{\ensuremath\varnothing}
 $if(euro)$
   \usepackage{eurosym}
 $endif$
@@ -49,8 +51,12 @@ $endif$
 }{}
 $if(geometry)$
 \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
-$else$
-\usepackage[margin=.5in]{geometry}
+% Mike Henderson: undo this since it messes with images
+    % These produce PDF's with different sized images! (which appear stretched)
+    % pandoc -s -S -o test-default.pdf test.md
+    % pandoc -s -S -V geometry:margin=.5in -o test-halfinch.pdf test.md
+    % $else$
+    % \usepackage[margin=.5in]{geometry}
 $endif$
 $if(lang)$
 \ifxetex
@@ -204,13 +210,15 @@ $if(verbatim-in-note)$
 \VerbatimFootnotes % allows verbatim text in footnotes
 $endif$
 
-\renewcommand{\abstractname}{Overview}
+% Mike Henderson: reverting back to "Abstract"
+    % \renewcommand{\abstractname}{Overview}
 
-\usepackage[toc]{multitoc}
-\renewcommand*{\multicolumntoc}{2}
-\setlength{\columnsep}{20pt}
-\setlength{\columnseprule}{1pt}
-\renewcommand{\columnseprulecolor}{\color[RGB]{224,224,224}}
+% Mike Henders: two-column TOC
+    \usepackage[toc]{multitoc}
+    \renewcommand*{\multicolumntoc}{2}
+    \setlength{\columnsep}{20pt}
+    \setlength{\columnseprule}{1pt}
+    \renewcommand{\columnseprulecolor}{\color[RGB]{224,224,224}}
 
 $if(title)$
 \title{$title$$if(subtitle)$\\\vspace{0.5em}{\large $subtitle$}$endif$}
