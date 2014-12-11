@@ -240,7 +240,9 @@ $if(version)$
 $endif$
 $if(abstract)$
 \begin{abstract}
-$abstract$
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\noindent $abstract$
 \end{abstract}
 $endif$
 
